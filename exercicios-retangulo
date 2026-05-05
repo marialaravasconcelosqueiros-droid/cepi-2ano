@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Globalization;
+
+namespace att4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            retangulo ret = new retangulo();
+
+            Console.WriteLine("Entre a Largura e Altura do retangulo: ");
+            ret.Largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            ret.Altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.WriteLine("AREA = " + ret.Area().ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("PERIMETRO = "+ ret.Perimetro().ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("DIAGONAL = "+ ret.Diagonal().ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
